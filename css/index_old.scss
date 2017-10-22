@@ -1,0 +1,957 @@
+$primary-color: #E20613;
+
+@font-face {
+    font-family: 'eurostileregular';
+    src: url('assets/fonts/webfontkit-eurostile/eurostile-webfont.woff2') format('woff2'),
+         url('assets/fonts/webfontkit-eurostile/eurostile-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'eurostilebold';
+    src: url('assets/fonts/webfontkit-eurostileBold/eurostib-webfont.woff2') format('woff2'),
+         url('assets/fonts/webfontkit-eurostileBold/eurostib-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+	font-family: 'eurostileregular';
+	max-width: 1200px;
+	margin: auto;
+	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+header{
+	display: grid;
+	grid-template-columns: 1fr;
+	padding-top: 15px;
+
+	li{
+		display:inline;
+	}
+}
+
+#headerImage{
+	grid-row-start: 1; 
+}
+
+#brandLogo{
+	max-width: 100%;
+	height: auto;
+}
+
+#mainMenu{
+	grid-row-start: 2;
+	-ms-flex-item-align: center;
+		align-self: center;
+	justify-self: center;
+	margin-top: 20px;
+	font-size: 17px;
+
+	ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li{
+			padding: 8px;
+
+			a{
+				text-decoration: none;
+				color: #000000;
+			}
+		}
+
+		li:hover{
+		background-color: $primary-color;
+
+			a{
+				color: #FFFFFF;
+			}
+		}
+	}
+}
+
+#contactSearch{
+	grid-row-start: 3;
+	-ms-flex-item-align: center;
+		align-self: center;
+		margin-top: 10px;
+
+	input{
+		width: 100%;
+	}
+}
+
+.active{
+	background-color: $primary-color;
+	color: #ffffff;
+}
+
+.selected{
+	font-weight: bold;
+	text-decoration: underline;
+	-webkit-text-decoration-color: $primary-color;
+			text-decoration-color: $primary-color;
+}
+
+#contactInfo{
+	text-align: center;
+
+	ul{
+		margin: 0;
+		padding: 0;
+	}
+
+	img{
+		width: 5%;
+		height: auto;
+		vertical-align: text-bottom;
+	}
+}
+
+main{
+	display: grid;
+	grid-template-columns: 100%;
+}
+
+#hero{
+	background-image: url('assets/fotos/IMG_1156_hero.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+#heroText{
+	background: rgba(255, 255, 255, 0.5);
+	padding: 15px;
+	text-align: center;
+}
+
+#contactBtn{
+	background-color: $primary-color;
+	color: #FFFFFF;
+	cursor: pointer;
+	border: none;
+	padding: 5px 24px;
+	margin-bottom: 6px;
+	text-align: center; 
+}
+
+#projects{
+	padding-top: 30px;
+	margin-bottom: 15px;
+}
+
+#projectsIcon{
+	width: 1.5em;
+}
+
+#projectHeader{
+	text-align: center;
+
+	h1{
+		display: inline;
+	}
+}
+
+#projectImages{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+	justify-content: center;
+}
+
+.projectImage{
+	position: relative;
+
+	img{
+		width: 150px;
+		height: auto;
+	}
+}
+
+#allProjects{
+	text-align: center;
+}
+
+.imgDesc{
+	display: none;
+}
+
+.paintbrush{
+	color: $primary-color;
+}
+
+#projectslink{
+	color: $primary-color;
+}
+
+#services{
+	margin-bottom: 15px;
+}
+
+#servicesHeader{
+	text-align: center;
+
+	span{
+		color: $primary-color;
+		font-size: 1.5em;
+	}
+
+	h1{
+		display: inline;
+	}
+}
+
+#serviceContent{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+		-webkit-box-pack: justify;
+			justify-content: space-around;
+	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#serviceNav, #serviceDesc{
+	width: 50%;
+}
+
+#serviceImg{
+	display: none;
+	background-image: url('assets/fotos/project-5.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+#serviceNav{
+	ul{
+		padding-left: 0px;
+	}
+
+	li{
+		list-style-type: none;
+		padding: 8px 16px;
+		display: block;
+	}
+
+	li:hover{
+		background-color: $primary-color;
+		cursor: pointer;
+		color: #FFFFFF;
+	}
+}
+
+#serviceBtn{
+	background-color: $primary-color;
+	color: #FFFFFF;
+	cursor: pointer;
+	border: none;
+	padding: 5px 24px;
+}
+
+#reviewsIcon{
+	font-size: 45px;
+	color: $primary-color;
+}
+
+#reviews{
+	padding-top: 25px;
+	margin-bottom: 25px;
+}
+
+#reviewsHeader{
+	text-align: center;
+
+	span{
+		font-size: 1.5em;
+	}
+
+	h1{
+		display: inline;
+	}
+}
+
+#reviewItems{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+			justify-content: space-between;
+}
+
+.reviewItem{
+	max-width: 100%;
+	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding: 10px;
+}
+
+.reviewHeader{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.reviewInfo{
+	line-height: 0.5;
+}
+
+.rating{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+
+	img{
+		width: 8%;
+	}
+}
+
+.img-rounded{
+	width: 70px;
+	height: 70px;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	border-radius: 50%; 
+}
+
+.reviewIcon{
+	margin-right: 10px;
+}
+
+#allReviews{
+	float: right;
+	color: $primary-color;
+}
+
+#quotations{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	margin-bottom: 15px;
+}
+
+#quotationInfo{
+	width: 100%;
+	padding: 20px;
+	-webkit-box-shadow: 2px 5px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+			box-shadow: 2px 5px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19); 
+}
+
+#quotationImg{
+	width: 100%;
+	background-image: url('assets/fotos/schilder-raam.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+#quotationsHeader{
+	width: 100%;
+	text-align: center;
+
+	span{
+		font-size: 1.5em;
+		color: $primary-color;
+	}
+
+	h1{
+		display: inline;
+	}
+}
+
+#quotationBtn{
+	background-color: $primary-color;
+	color: #FFFFFF;
+	cursor: pointer;
+	border: none;
+	padding: 5px 24px;
+	float: right;  
+
+}
+
+#companyInfo{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+			justify-content: space-between;
+	margin-bottom: 15px;
+}
+
+.infoSection{
+	width: 100%;
+	text-align: center;
+}
+
+.infoHeader{
+	display: inline;
+}
+
+.infoIcon{
+	font-size: 1.5em;
+	color: $primary-color;
+}
+
+footer{
+	display: grid;
+	justify-items: center;
+	text-align: center;
+}
+
+.footerItem{
+	width: 80%;
+	margin-bottom: 15px;
+}
+
+.footerHeader{
+	display: inline;
+}
+
+#contactInfoFooter{
+	a{
+		color: $primary-color;
+	}
+}
+
+.footerIcon{
+	color: $primary-color;
+	font-size: 1.5em;
+}
+
+#VCALogo{
+	width: 30%;
+	vertical-align: top;
+}
+
+#serviceGuaranteeLogo{
+	width: 25%;
+}
+
+footer p{
+	line-height: 0.5;
+}
+
+/* tablet portrait */
+@media (min-width: 600px) and (max-width: 900px) {
+	
+	header{
+		grid-template-columns: repeat(4, 1fr);
+	}
+	
+	#headerImage{
+		grid-column-start: 1;
+		grid-row: 1/1;
+	}
+	
+	#brandLogo{
+		max-width: 80%;
+	}
+	
+	#mainMenu{
+		grid-column: 2/4;
+		grid-row-start: 1;
+		margin-top: 0;
+	}
+
+	#contactSearch{
+		grid-row-start: 1;
+	}
+
+	#hero{
+		padding: 60px;
+	}
+	
+	#heroText{
+		width: 40%;
+		text-align: left;
+	}
+
+	#projectHeader{
+		text-align: left;
+	}
+
+	#projectImages{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+				justify-content: space-between;
+	}
+
+	#servicesHeader{
+		text-align: left;
+	}
+
+	#serviceNav, #serviceDesc, #serviceImg{
+		width: 25%;
+	}
+
+	#serviceImg{
+		display: initial;
+		margin: 15px;
+	}
+
+	#reviewsHeader{
+		text-align: left;
+
+		span {
+			font-size: 2.5em;
+		}
+	}
+
+	.reviewItem{
+		max-width: 30%;
+	}
+
+	#quotations{
+		-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+				justify-content: space-between;
+		-ms-flex-line-pack: center;
+			align-content: center;
+	}    
+
+	#quotationsHeader{
+		text-align: left;
+
+		span{
+			font-size: 2.5em;
+		}
+	}
+
+	#quotationInfo{
+		width: 45%;
+		padding: 20px;
+	}
+
+	#quotationImg{
+		width: 45%;
+	}
+
+	#companyInfo{
+		padding: 20px;
+
+		p{
+			width: 90%;
+		}
+	}
+
+	.infoSection{
+		width: 50%;
+		text-align: left;
+	}
+
+	.infoIcon{
+		font-size: 2.5em;
+	}
+
+	footer{
+		grid-template-columns: repeat(4,1fr);
+		justify-items: left;
+		text-align: left;
+		margin: 0px 25px;
+	}
+
+	#VCALogo{
+		width: 50%;
+	}
+
+	#serviceGuaranteeLogo{
+		width: 40%;
+	}
+  }
+
+/* tablet landscape   */
+@media (min-width: 900px) and (max-width: 1200px) and (orientation: landscape) {
+	
+	header{
+		grid-template-columns: repeat(4, 1fr);
+		-webkit-box-pack: center;
+			-ms-flex-pack: center;
+				justify-content: center; 
+		margin: 0px 25px;
+	}
+	
+	#headerImage{
+		grid-column-start: 1;
+		grid-row: 1/1;
+	}
+	
+	#brandLogo{
+		max-width: 80%;
+	}
+	
+	#mainMenu{
+		grid-column: 2/4;
+		grid-row-start: 1;
+		margin-top: 0;
+	}
+
+	#contactInfo{
+		font-size: 10px;
+	}
+	
+	#contactSearch{
+		grid-row-start: 1;
+		-ms-flex-item-align: start;
+			align-self: start;
+	}
+
+	#hero{
+		padding: 60px;
+	}
+   
+	#heroText{
+		width: 40%;
+		text-align: left;
+	}
+
+	main{
+		margin: 0px 25px;
+	}
+
+	#companyIntro{
+		padding-top: 15px; 
+	} 
+
+	#servicesHeader{
+		text-align: left;
+
+		span{
+			margin: 0 7px;
+			font-size: 2.5em;
+		}
+	} 
+
+	#serviceNav, #serviceDesc, #serviceImg{
+		width: 25%;
+	}
+
+	#serviceImg{
+		display: initial;
+		margin: 40px;
+	}
+
+	#projectImages{
+		-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+				justify-content: space-between;
+	}
+
+	.projectImage{
+		img{
+			width: 200px;
+		}
+	} 
+
+	#projectsIcon{
+		width: 2.5em;
+		vertical-align: bottom;
+	}
+
+	#projectHeader{
+		display: inline;
+		text-align: left;
+	}
+
+	.paintbrush{
+		font-size: 45px;
+		-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+	}
+
+	#reviewsHeader{
+		text-align: left;
+
+		span {
+			font-size: 2.5em;
+		}
+	}
+
+	.reviewItem{
+		max-width: 30%;
+	}
+
+	#quotations{
+		-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+				justify-content: space-between;
+		-ms-flex-line-pack: center;
+			align-content: center;
+	}    
+
+	#quotationsHeader{
+		text-align: left;
+
+		span{
+			font-size: 2.5em;
+		}
+	}
+
+	#quotationInfo{
+		width: 45%;
+		padding: 20px;
+	}
+
+	#quotationImg{
+		width: 45%;
+	}
+
+	.infoSection{
+		width: 24%;
+		text-align: left;
+	}
+
+	.infoIcon{
+		font-size: 2.5em;
+	}
+
+	.infoSection{
+		width: 24%;
+		text-align: left;
+	}
+
+	footer{
+		grid-template-columns: repeat(4,1fr);
+		justify-items: left;
+		text-align: left;
+		margin: 0px 25px;
+	}
+
+	#VCALogo{
+		width: 50%;
+	}
+
+	#serviceGuaranteeLogo{
+		width: 40%;
+	}
+  }
+
+  /* laptop/desktop */
+@media (min-width: 1200px){
+	
+	/* HEADER */
+
+	header{
+		grid-template-columns: repeat(4, 1fr);
+		-webkit-box-pack: center;
+			-ms-flex-pack: center;
+				justify-content: center; 
+		margin: 0px 25px;
+		padding: 15px 0;
+	}
+	
+	#headerImage{
+		grid-column-start: 1;
+		grid-row: 1/1;
+	}
+	
+	#brandLogo{
+		max-width: 80%;
+	}
+	
+	#mainMenu{
+		grid-column: 2/4;
+		grid-row-start: 1;
+		margin-top: 0;
+		font-size: 20px;
+	}
+
+	#contactInfo{
+		font-size: 11px;
+	}
+
+	#telephone{
+		padding-right: 10px;
+	}
+
+	#contactSearch{
+		grid-row-start: 1;
+		grid-column-start: 4;
+	}
+
+	#hero{
+		padding: 60px;
+	}
+
+	#heroText{
+		width: 40%;
+		text-align: left;
+	}
+
+	/* MAIN */
+	
+	main{
+		-webkit-box-pack: center;
+			-ms-flex-pack: center;
+				justify-content: center;
+		margin: 0px 25px;
+	}
+
+	#companyIntro{
+		margin-top: 15px;
+	}
+
+	#servicesHeader{
+		span{
+			margin: 0 7px;
+			font-size: 2.5em;
+		}
+	} 
+
+	#projectImages{
+		-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+				justify-content: space-between;
+		margin-bottom: 20px;
+	}
+
+	.projectImage:hover .imgDesc{
+		opacity: 0.7;
+	}
+
+	.imgDesc{
+		display: initial;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		-webkit-transition: .5s ease;
+		transition: .5s ease;
+		background-color: rgb(255, 255, 255);
+	}
+
+	.imgDescText{
+		font-weight: bolder;
+		color: #FF0000;
+		position: absolute;
+		top: 65%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+	}
+
+	#projectsIcon{
+		width: 2.5em;
+		vertical-align: bottom;
+	}
+
+	#projectHeader{
+		text-align: left;
+	}
+
+	.projectImage{
+		img{
+			width: 250px;
+		}
+	} 
+
+	#projectsLink{
+		float: right;
+	}
+
+	.paintbrush{
+		font-size: 45px;
+		position: absolute;
+		top: 25%;
+		left: 40%;
+		-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+	}
+
+	#servicesHeader {
+		display: inline;
+	}
+
+	#serviceNav, #serviceDesc, #serviceImg{
+		width: 25%;
+	}
+
+	#serviceImg{
+		display: initial;
+		margin: 40px;
+	}
+
+	#reviewsHeader{
+		text-align: left;
+
+		span {
+			font-size: 2.5em;
+		}
+	}
+
+	.reviewItem{
+		max-width: 30%;
+	}
+
+	#quotations{
+		-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+				justify-content: space-between;
+		-ms-flex-line-pack: center;
+			align-content: center;
+	}
+
+	#quotationsHeader{
+		text-align: left;
+
+		span{
+			font-size: 2.5em;
+		}
+	}
+
+	#quotationInfo{
+		width: 45%;
+		padding: 10px;
+	}
+
+	#quotationImg{
+		width: 45%;
+	}
+
+	.infoSection{
+		width: 24%;
+		text-align: left;
+	}
+
+	.infoIcon{
+		font-size: 2.5em;
+	}
+
+	footer{
+		grid-template-columns: repeat(4,1fr);
+		justify-items: left;
+		text-align: left;
+		margin: 0px 25px;
+	}
+
+	#VCALogo{
+		width: 50%;
+	}
+
+	#serviceGuaranteeLogo{
+		width: 40%;
+	}
+}

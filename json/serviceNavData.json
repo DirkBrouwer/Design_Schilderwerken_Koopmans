@@ -1,0 +1,39 @@
+{
+	"serviceNavItems": {
+		"serviceNavItem0": {
+			"header": "Schilderwerk",
+			"content": "Lorem ipsum dolor sit amet, nulla everti suscipiantur vel ea. In stet ceteros adversarium qui. Eu eam diceret maiorum, te nec delectus consectetuer.",
+			"image": "assets/fotos/project-1.jpg"
+		},
+		"serviceNavItem1": {
+			"header": "Spackspuitwerk",
+			"content": "Spackspuitwerk is een betaalbaar alternatief voor traditioneel stucwerk. Spackspuitwerk of spuitpleister wordt aangebracht door een gekwalificeerde stucadoor met behulp van een spackspuitmachine...",
+			"image": "assets/fotos/project-5.jpg"
+		},
+		"serviceNavItem2": {
+			"header": "Houtrotreparatie",
+			"content": "Mea iriure tritani in. Commodo officiis facilisis no est. Ex officiis placerat sea, eum eu eirmod molestie. Est debet vocibus eu, veri nemore accusam vis in, fuisset postulant laboramus at pro. Mei in vidisse fastidii volutpat.",
+			"image": "assets/fotos/project-2.jpg"
+		},
+		"serviceNavItem3": {
+			"header": "Wandafwerking",
+			"content": "Voluptua interpretaris vis te. Quis suscipit pericula per cu, in vis tale eius. Te ius dicant scaevola, te mea falli oporteat. Cu vidit liber vulputate pri.",
+			"image": "assets/fotos/project-3.jpg"
+		},
+		"serviceNavItem4": {
+			"header": "Kleuradvies",
+			"content": "Tritani vituperata definitionem eam ei. Illud integre probatus ei quo. An ius tantas inciderint. Eu vix dolorem epicurei, has id docendi placerat.",
+			"image": "assets/fotos/project-4.jpg"
+		},
+		"serviceNavItem5": {
+			"header": "Glaszetten",
+			"content": "No his dolore legendos, posse oblique petentium sit te. Pri ex debet numquam. Cu vel iriure fierent accusata, mel affert dicunt no. Cu nostrum similique eum, id stet vide vel. Labore urbanitas est ex.",
+			"image": "assets/fotos/schilder-raam.jpg"
+		},
+		"serviceNavItem6": {
+			"header": "Behangen",
+			"content": "Ei est modus iudico verterem. Ex pri electram appellantur. Ad ullum reformidans mediocritatem per. Ad lobortis delicata eam. Odio homero conceptam cu eam, fierent definitiones vim te.",
+			"image": "assets/fotos/hero-image.jpg"
+		}
+	}
+}

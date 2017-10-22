@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Koopmans</title>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	 crossorigin="anonymous"></script>
+	<script src="assets/libraries/blazy.min.js"></script>
+	<script src="js/index.js"></script>
+
+	<link rel="stylesheet" href="assets/fonts/et-line-font/et-line-font/style.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+	<div id="mainContainer">
+		<header>
+			<div id="headerImage">
+				<img id="brandLogo" src="assets/logos/schilderwerken-koopmans-logo.svg" alt="schilderwerken-koopmans-logo">
+			</div>
+			<nav id="mainMenu">
+				<ul>
+					<li class="active">
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">Diensten</a>
+					</li>
+					<li>
+						<a href="#">Projecten</a>
+					</li>
+					<li>
+						<a href="#">Contact</a>
+					</li>
+				</ul>
+			</nav>
+			<div id="contactInfo">
+				<ul>
+					<li id="telephone">
+						<img src="assets/icons/telephone-handset_red.svg" alt="telephone: ">(0512) 54 11 49</img>
+					</li>
+					<li id="email">
+						<img src="assets/icons/little-envelope_red.svg" alt="email: ">info@schilderwerkenkoopmans.nl</img>
+					</li>
+				</ul>
+			</div>
+			<div id="search">
+				<input id="searchBar" title="vul hier uw zoekterm in" type="text" placeholder="zoeken">
+				<label label for="searchBar"><div id="searchIcon" class="icon-magnifying-glass"></div></label>
+			</div>
+		</header>
+		<main>
+			<div class="b-lazy" data-src="assets/fotos/hero-image.jpg" id="hero">
+				<div id="heroText">
+					<h1>Modern Vakmanschap</h1>
+					<p>De kleinschaligheid van Schilderwerken Koopmans is onze kracht. Onze klanten hebben altijd rechtstreeks en persoonlijk
+						contact.
+						<br> Schilderwerken Koopmans is aangesloten bij OnderhoudNL Garantie en VCA-gecertificeerd.
+						<em>
+							U kunt er dus zeker van zijn dat wij vakwerk leveren met de hoogste kwaliteit.</em>
+					</p>
+					<button id="contactBtn">
+						<b>Neem contact op</b>
+					</button>
+				</div>
+			</div>
+			<div id="projects">
+				<div id="projectHeader">
+					<img id="projectsIcon" src="assets/icons/if_home_430102_red.svg" alt="home icon">
+					<h1>
+						Projecten
+					</h1>
+				</div>
+
+				<div id="projectImages">
+					<div class="projectImage">
+						<img class="b-lazy" data-src="assets/fotos/project-1.jpg" src="assets/fotos/placeholder.gif" alt="project image 1">
+						<div class="imgDesc">
+							<span class="icon-paintbrush paintbrush"></span>
+							<br>
+							<div class="imgDescText">
+								Placeholder text
+							</div>
+						</div>
+					</div>
+					<div class="projectImage">
+						<img class="b-lazy" data-src="assets/fotos/project-2.jpg" src="assets/fotos/placeholder.gif" alt="project image 2">
+						<div class="imgDesc">
+							<span class="icon-paintbrush paintbrush"></span>
+							<br>
+							<div class="imgDescText">
+								Placeholder text
+							</div>
+						</div>
+					</div>
+					<div class="projectImage">
+						<img class="b-lazy" data-src="assets/fotos/project-3.jpg" src="assets/fotos/placeholder.gif" alt="project image 3">
+						<div class="imgDesc">
+							<span class="icon-paintbrush paintbrush"></span>
+							<br>
+							<div class="imgDescText">
+								Placeholder text
+							</div>
+						</div>
+					</div>
+					<div class="projectImage">
+						<img class="b-lazy" data-src="assets/fotos/project-4.jpg" src="assets/fotos/placeholder.gif" alt="project image 4">
+						<div class="imgDesc">
+							<span class="icon-paintbrush paintbrush"></span>
+							<br>
+							<div class="imgDescText">
+								Placeholder text
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="allProjects">
+				<a id="projectsLink" href="#">
+					<em>Bekijk alle projecten</em>
+				</a>
+			</div>
+			<div id="services">
+				<div id="servicesHeader">
+					<span class="icon-paintbrush"></span>
+					<h1>
+						Diensten
+					</h1>
+				</div>
+				<div id="serviceContent">
+					<div id="serviceNav">
+
+					</div>
+					<div id="serviceDesc">
+						<h2 id="serviceDescHeader">
+							<b>Spackspuitwerk</b>
+						</h2>
+						<p id="serviceDescText">Spackspuitwerk is een betaalbaar alternatief voor traditioneel stucwerk. Spackspuitwerk of spuitpleister wordt aangebracht
+							door een gekwalificeerde stucadoor met behulp van een spackspuitmachine...
+							<a href="#">
+								<em>Lees meer</em>
+							</a>
+						</p>
+						<button id="serviceBtn">
+							<b>Offerte aanvragen</b>
+						</button>
+					</div>
+					<div class="b-lazy" data-src="assets/fotos/project-5.jpg" id="serviceImg">
+					</div>
+				</div>
+			</div>
+			<div id="reviews">
+				<div id="reviewsHeader">
+					<span id="reviewsIcon" class="icon-quote"></span>
+					<h1>
+						Klantreacties
+					</h1>
+				</div>
+				<div id="reviewItems">
+					<div class="reviewItem">
+						<div class="reviewHeader">
+							<div class="reviewIcon">
+								<img data-src="assets/fotos/man2.jpg" src="assets/fotos/placeholder.gif" alt="user review image" class="img-rounded b-lazy">
+							</div>
+							<div class="reviewInfo">
+								<h2>Martin R.</h2>
+								<p>Drachten</p>
+							</div>
+						</div>
+						<div class="reviewText">
+							<p>
+								<em>"Schilderwerken Koopmans heeft zoals altijd weer fantastisch werk geleverd! De kozijnen van ons huis zijn gerestaureerd
+									en staan weer strak in de lak."</em>
+							</p>
+						</div>
+						<div class="unratedStars b-lazy" data-src="assets/icons/star.svg">
+							<div class="ratedStars b-lazy" data-src="assets/icons/star.svg">
+
+							</div>
+						</div>
+					</div>
+					<div class="reviewItem">
+						<div class="reviewHeader">
+							<div class="reviewIcon">
+								<img data-src="assets/fotos/vrouw1.jpg" src="assets/fotos/placeholder.gif" alt="user review image" class="img-rounded b-lazy">
+							</div>
+							<div class="reviewInfo">
+								<h2>Rianne van E.</h2>
+								<p>Leeuwarden</p>
+							</div>
+						</div>
+						<div class="reviewText">
+							<p>
+								<em>"Schilderwerken Koopmans heeft zoals altijd weer fantastisch werk geleverd! De kozijnen van ons huis zijn gerestaureerd
+									en staan weer strak in de lak."</em>
+							</p>
+						</div>
+						<div class="unratedStars b-lazy" data-src="assets/icons/star.svg">
+							<div class="ratedStars b-lazy" data-src="assets/icons/star.svg">
+
+							</div>
+						</div>
+					</div>
+					<div class="reviewItem">
+						<div class="reviewHeader">
+							<div class="reviewIcon">
+								<img data-src="assets/fotos/man1.jpg" src="assets/fotos/placeholder.gif" alt="user review image" class="img-rounded b-lazy">
+							</div>
+							<div class="reviewInfo">
+								<h2>Eduardo M.</h2>
+								<p>Beetsterzwaag</p>
+							</div>
+						</div>
+						<div class="reviewText">
+							<p>
+								<em>"Schilderwerken Koopmans heeft zoals altijd weer fantastisch werk geleverd! De kozijnen van ons huis zijn gerestaureerd
+									en staan weer strak in de lak."</em>
+							</p>
+						</div>
+						<div class="unratedStars b-lazy" data-src="assets/icons/star.svg">
+							<div class="ratedStars b-lazy" data-src="assets/icons/star.svg">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="allReviews">
+					<a href="#">
+						<em>Bekijk alle reviews</em>
+					</a>
+				</div>
+
+			</div>
+			<div id="quotations">
+				<div id="quotationInfo">
+					<div id="quotationsHeader">
+						<span id="quotationsIcon" class="icon-document"></span>
+						<h1>
+							Offerte aanvragen
+						</h1>
+					</div>
+					<p>U kunt vrijblijvend een offerte aanvragen via de website van onze brancheorganisatie OnderhoudNL Garantie. Wij nemen
+						dan zo snel mogelijk contact met u op zodat wij u kunnen voorzien van een realistische prijsindicatie.
+					</p>
+					<button id="quotationBtn">
+						<b>Offerte aanvragen</b>
+					</button>
+				</div>
+				<div class="b-lazy" data-src="assets/fotos/schilder-raam.jpg" id="quotationImg">
+				</div>
+			</div>
+			<div id="companyInfo">
+				<div id="personalContactInfo" class="infoSection">
+					<span class="icon-chat infoIcon"></span>
+					<h2 class="infoHeader">Rechtstreeks contact</h2>
+					<p>Wij vinden het erg belangrijk om klant rechtstreeks contact te hebben met onze klanten. Geen belmenu's maar persoonlijk
+						contact.
+					</p>
+				</div>
+				<div id="adviceInfo" class="infoSection">
+					<span class="icon-streetsign infoIcon"></span>
+					<h2 class="infoHeader">Professioneel advies</h2>
+					<p>Elke gebouw is weer anders en vraagt om een op maat advies. Wij kunnen u voorzien van professioneel advies op het gebied
+						van kleur en behang.</p>
+				</div>
+				<div id="serviceInfo" class="infoSection">
+					<span class="icon-happy infoIcon"></span>
+					<h2 class="infoHeader">Tevreden klanten</h2>
+					<p>Wij doen er alles aan om onze klanten te voorzien van een goede service.</p>
+				</div>
+				<div id="qualityInfo" class="infoSection">
+					<span class="icon-documents infoIcon"></span>
+					<h2 class="infoHeader">Kwaliteit gegarandeerd</h2>
+					<p>Ons personeel bestaat uit ervaren en gekwalificeerde vakmensen. Kwaliteit van vakmanschap staat bij ons hoog in het
+						vaandel. Wij zijn VCA-gecertificeerd en aangesloten bij OnderhoudNL.</p>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div id="contactInfoFooter" class="footerItem">
+				<span class="icon-phone footerIcon"></span>
+				<h3 class="footerHeader">Contactgegevens</h3>
+				<p><a href="#">info@schilderwerkenkoopmans.nl</a></p>
+				<p><a href="#">0512-541149</a></p>
+			</div>
+			<div id="visitaddress" class="footerItem">
+				<span class="icon-map-pin footerIcon"></span>
+				<h3 class="footerHeader">Bezoekadres</h3>
+				<p>Het gangboord 47</p>
+				<p>9206 BJ Drachten</p>
+			</div>
+			<div id="postaddress" class="footerItem">
+				<span class="icon-envelope footerIcon"></span>
+				<h3 class="footerHeader">Postadres</h3>
+				<p>Het Noord 12-1</p>
+				<p>9207 AE Drachten</p>
+			</div>
+			<div id="footerLogo" class="footerItem">
+				<img class="b-lazy" id="VCALogo" data-src="assets/logos/VCA.svg" src="assets/fotos/placeholder.gif" alt="VCALogo">
+				<img class="b-lazy" id="serviceGuaranteeLogo" data-src="assets/logos/onderhoudnl-garantie-logo-rgb.svg" src="assets/fotos/placeholder.gif"
+				 alt="serviceGuaranteeLogo">
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
