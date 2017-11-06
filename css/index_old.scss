@@ -1,144 +1,169 @@
-$primary-color: #E20613;
+// @charset 'utf-8';
 
-@font-face {
-    font-family: 'eurostileregular';
-    src: url('assets/fonts/webfontkit-eurostile/eurostile-webfont.woff2') format('woff2'),
-         url('assets/fonts/webfontkit-eurostile/eurostile-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+// $font-stack: (
+//   'eurostile',
+//   'Arial',
+//   sans-serif,
+// );
 
-@font-face {
-    font-family: 'eurostilebold';
-    src: url('assets/fonts/webfontkit-eurostileBold/eurostib-webfont.woff2') format('woff2'),
-         url('assets/fonts/webfontkit-eurostileBold/eurostib-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+$primary-color: hsl(356, 95%, 45%);
+$hover-state-color: hsl(0, 100%, 62%);
 
-body{
-	font-family: 'eurostileregular';
-	max-width: 1200px;
-	margin: auto;
-	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+// @font-face {
+//     font-family: 'eurostile';
+//     src: url('../assets/fonts/webfontkit-eurostile/eurostile-webfont.woff2') format('woff2'),
+//          url('../assets/fonts/webfontkit-eurostile/eurostile-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
 
-header{
-	display: grid;
-	grid-template-columns: 1fr;
-	padding-top: 15px;
+// @font-face {
+//     font-family: 'eurostile';
+//     src: url('../assets/fonts/webfontkit-eurostileBold/eurostib-webfont.woff2') format('woff2'),
+//          url('../assets/fonts/webfontkit-eurostileBold/eurostib-webfont.woff') format('woff');
+//     font-weight: bold;
+//     font-style: normal;
+// }
 
-	li{
-		display:inline;
-	}
-}
+// body{
+// 	font-family: $font-stack;
+// 	max-width: 1200px;
+// 	margin: auto;
+// 	-webkit-box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, 0.2), 0 6px 20px 0 hsla(0, 0%, 0%, 0.19);
+// 			box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, 0.2), 0 6px 20px 0 hsla(0, 0%, 0%, 0.19);
+// }
 
-#headerImage{
-	grid-row-start: 1; 
-}
+// p{
+// 	line-height: 1.5em;
+// }
 
-#brandLogo{
-	max-width: 100%;
-	height: auto;
-}
+// header{
+// 	display: grid;
+// 	grid-template-columns: 1fr;
+// 	padding: 15px;
+// 	margin-bottom: 25px;
 
-#mainMenu{
-	grid-row-start: 2;
-	-ms-flex-item-align: center;
-		align-self: center;
-	justify-self: center;
-	margin-top: 20px;
-	font-size: 17px;
+// 	li{
+// 		display:inline;
+// 	}
+// }
 
-	ul{
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
+// #headerImage{
+// 	grid-row-start: 1; 
+// }
 
-		li{
-			padding: 8px;
+// #brandLogo{
+// 	max-width: 100%;
+// 	height: auto;
+// }
 
-			a{
-				text-decoration: none;
-				color: #000000;
-			}
-		}
+// #mainMenu{
+// 	grid-row-start: 2;
+// 	-ms-flex-item-align: center;
+// 		align-self: center;
+// 	justify-self: center;
+// 	margin-top: 20px;
+// 	font-size: 17px;
 
-		li:hover{
-		background-color: $primary-color;
+// 	ul{
+// 		list-style-type: none;
+// 		margin: 0;
+// 		padding: 0;
 
-			a{
-				color: #FFFFFF;
-			}
-		}
-	}
-}
+// 		li{
+// 			padding: 8px;
 
-#contactSearch{
-	grid-row-start: 3;
-	-ms-flex-item-align: center;
-		align-self: center;
-		margin-top: 10px;
+// 			a{
+// 				text-decoration: none;
+// 				color: hsl(0, 0%, 0%);
+// 			}
 
-	input{
-		width: 100%;
-	}
-}
+// 			&:hover{
+// 				background-color: $hover-state-color;
 
-.active{
-	background-color: $primary-color;
-	color: #ffffff;
-}
+// 				a{
+// 					color: hsl(0, 0%, 100%);
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 
-.selected{
-	font-weight: bold;
-	text-decoration: underline;
-	-webkit-text-decoration-color: $primary-color;
-			text-decoration-color: $primary-color;
-}
+// #search{
+// 	grid-row-start: 4;
+// 	-ms-flex-item-align: center;
+// 		align-self: center;
+// 		margin-top: 10px;
+// 	text-align: center;
 
-#contactInfo{
-	text-align: center;
+// 	input{
+// 		font-size: 20px;
+// 		width: 60%;
+// 		border: 1px solid hsl(0, 0%, 100%);
+// 		border-bottom: 1px solid $primary-color;
+// 	}
+// }
 
-	ul{
-		margin: 0;
-		padding: 0;
-	}
+// #searchIcon{
+// 	font-size: 25px;
+// 	vertical-align: middle;
+// 	cursor: pointer;
+// }
 
-	img{
-		width: 5%;
-		height: auto;
-		vertical-align: text-bottom;
-	}
-}
+// .active{
+// 	background-color: $primary-color;
+// 	color: hsl(0, 0%, 100%);
+// }
 
-main{
-	display: grid;
-	grid-template-columns: 100%;
-}
+// .selected{
+// 	font-weight: bold;
+// 	text-decoration: underline;
+// 	-webkit-text-decoration-color: $primary-color;
+// 			text-decoration-color: $primary-color;
+// }
 
-#hero{
-	background-image: url('assets/fotos/IMG_1156_hero.jpg');
-	background-size: cover;
-	background-position: center;
-}
+// #contactInfo{
+// 	font-size: 11px;
+// 	text-align: center;
+// 	margin-top: 20px;
+	
+// 	ul{
+// 		margin: 0;
+// 		padding: 0;
+// 	}
 
-#heroText{
-	background: rgba(255, 255, 255, 0.5);
-	padding: 15px;
-	text-align: center;
-}
+// 	img{
+// 		width: 3%;
+// 		height: auto;
+// 		vertical-align: text-bottom;
+// 	}
+// }
 
-#contactBtn{
-	background-color: $primary-color;
-	color: #FFFFFF;
-	cursor: pointer;
-	border: none;
-	padding: 5px 24px;
-	margin-bottom: 6px;
-	text-align: center; 
-}
+// main{
+// 	display: grid;
+// 	grid-template-columns: 100%;
+// }
+
+// #hero{
+// 	background-size: cover;
+// 	background-position: center;
+// }
+
+// #heroText{
+// 	background: rgba(255, 255, 255, 0.5);
+// 	padding: 15px;
+// 	text-align: center;
+// }
+
+// #contactBtn{
+// 	background-color: $primary-color;
+// 	color: hsl(0, 0%, 100%);
+// 	cursor: pointer;
+// 	border: none;
+// 	padding: 5px 24px;
+// 	margin-bottom: 6px;
+// 	text-align: center; 
+// }
 
 #projects{
 	padding-top: 30px;
@@ -174,11 +199,13 @@ main{
 	img{
 		width: 150px;
 		height: auto;
+		display: block;
 	}
 }
 
 #allProjects{
 	text-align: center;
+	margin-bottom: 25px;
 }
 
 .imgDesc{
@@ -189,7 +216,7 @@ main{
 	color: $primary-color;
 }
 
-#projectslink{
+#projectsLink{
 	color: $primary-color;
 }
 
@@ -221,13 +248,16 @@ main{
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#serviceNav, #serviceDesc{
+#serviceNav{
+	width: 40%;
+}
+
+#serviceDesc{
 	width: 50%;
 }
 
 #serviceImg{
 	display: none;
-	background-image: url('assets/fotos/project-5.jpg');
 	background-size: cover;
 	background-position: center;
 }
@@ -241,12 +271,12 @@ main{
 		list-style-type: none;
 		padding: 8px 16px;
 		display: block;
-	}
 
-	li:hover{
-		background-color: $primary-color;
-		cursor: pointer;
-		color: #FFFFFF;
+		&:hover{
+			background-color: $primary-color;
+			cursor: pointer;
+			color: hsl(0, 0%, 100%);
+		}
 	}
 }
 
@@ -296,6 +326,7 @@ main{
 	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	padding: 10px;
+	margin-bottom: 25px;
 }
 
 .reviewHeader{
@@ -304,18 +335,23 @@ main{
 	display: flex;
 }
 
-.reviewInfo{
-	line-height: 0.5;
+.unratedStars{
+
+	height: 32px;
+	width: 5 * 32px;
+
+	background-size: auto 200%;
+	background-repeat: repeat-x;
+	background-position: bottom left;
 }
 
-.rating{
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
+.ratedStars{
+	height: 32px;
+	width: 83%;
 
-	img{
-		width: 8%;
-	}
+	background-size: auto 200%;
+	background-repeat: repeat-x;
+	background-position: top left;
 }
 
 .img-rounded{
@@ -331,8 +367,10 @@ main{
 }
 
 #allReviews{
-	float: right;
-	color: $primary-color;
+	text-align: center;
+	a{
+		color: $primary-color;
+	}
 }
 
 #quotations{
@@ -341,19 +379,20 @@ main{
 	display: flex;
 	-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-	margin-bottom: 15px;
+	margin-bottom: 35px;
 }
 
 #quotationInfo{
 	width: 100%;
 	padding: 20px;
+	text-align: center;
 	-webkit-box-shadow: 2px 5px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
 			box-shadow: 2px 5px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19); 
 }
 
 #quotationImg{
 	width: 100%;
-	background-image: url('assets/fotos/schilder-raam.jpg');
+	height: 200px;
 	background-size: cover;
 	background-position: center;
 }
@@ -374,12 +413,10 @@ main{
 
 #quotationBtn{
 	background-color: $primary-color;
-	color: #FFFFFF;
+	color: hsl(0, 0%, 100%);
 	cursor: pointer;
 	border: none;
 	padding: 5px 24px;
-	float: right;  
-
 }
 
 #companyInfo{
@@ -412,6 +449,7 @@ footer{
 	display: grid;
 	justify-items: center;
 	text-align: center;
+	line-height: 1.5em;
 }
 
 .footerItem{
@@ -443,371 +481,74 @@ footer{
 	width: 25%;
 }
 
-footer p{
-	line-height: 0.5;
-}
-
-/* tablet portrait */
-@media (min-width: 600px) and (max-width: 900px) {
+@media (min-width: 600px) and (max-width: 1920px){
+	// header{
+	// 	grid-template-columns: repeat(4, 1fr);
+	// 	-webkit-box-pack: center;
+	// 		-ms-flex-pack: center;
+	// 			justify-content: center; 
+	// 	margin: 0px 25px;
+	// 	padding: 30px 0;
+	// }
 	
-	header{
-		grid-template-columns: repeat(4, 1fr);
-	}
+	// #headerImage{
+	// 	grid-column-start: 1;
+	// 	grid-row: 1/1;
+	// }
 	
-	#headerImage{
-		grid-column-start: 1;
-		grid-row: 1/1;
-	}
+	// #brandLogo{
+	// 	max-width: 80%;
+	// }
 	
-	#brandLogo{
-		max-width: 80%;
-	}
+	// #mainMenu{
+	// 	grid-column: 2/4;
+	// 	grid-row-start: 1;
+	// 	margin-top: 0;
+	// 	font-size: 20px;
+	// }
+
+	// #contactInfo{
+
+	// 	img{
+	// 		width: 5%;
+	// 		height: auto;
+	// 	}
+	// }
+
+	// #telephone{
+	// 	padding-right: 10px;
+	// }
+
+	// #search{
+	// 	grid-row-start: 1;
+	// 	grid-column-start: 4;
+
+	// 	input{
+	// 		width: 85%;
+	// 	}
+	// }
+
+	// #hero{
+	// 	padding: 60px;
+	// }
+
+	// #heroText{
+	// 	width: 40%;
+	// 	text-align: left;
+	// }
+
+	// /* MAIN */
 	
-	#mainMenu{
-		grid-column: 2/4;
-		grid-row-start: 1;
-		margin-top: 0;
-	}
+	// main{
+	// 	-webkit-box-pack: center;
+	// 		-ms-flex-pack: center;
+	// 			justify-content: center;
+	// 	margin: 0px 25px;
+	// }
 
-	#contactSearch{
-		grid-row-start: 1;
-	}
-
-	#hero{
-		padding: 60px;
-	}
-	
-	#heroText{
-		width: 40%;
-		text-align: left;
-	}
-
-	#projectHeader{
-		text-align: left;
-	}
-
-	#projectImages{
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-pack: justify;
-			-ms-flex-pack: justify;
-				justify-content: space-between;
-	}
-
-	#servicesHeader{
-		text-align: left;
-	}
-
-	#serviceNav, #serviceDesc, #serviceImg{
-		width: 25%;
-	}
-
-	#serviceImg{
-		display: initial;
-		margin: 15px;
-	}
-
-	#reviewsHeader{
-		text-align: left;
-
-		span {
-			font-size: 2.5em;
-		}
-	}
-
-	.reviewItem{
-		max-width: 30%;
-	}
-
-	#quotations{
-		-webkit-box-pack: justify;
-			-ms-flex-pack: justify;
-				justify-content: space-between;
-		-ms-flex-line-pack: center;
-			align-content: center;
-	}    
-
-	#quotationsHeader{
-		text-align: left;
-
-		span{
-			font-size: 2.5em;
-		}
-	}
-
-	#quotationInfo{
-		width: 45%;
-		padding: 20px;
-	}
-
-	#quotationImg{
-		width: 45%;
-	}
-
-	#companyInfo{
-		padding: 20px;
-
-		p{
-			width: 90%;
-		}
-	}
-
-	.infoSection{
-		width: 50%;
-		text-align: left;
-	}
-
-	.infoIcon{
-		font-size: 2.5em;
-	}
-
-	footer{
-		grid-template-columns: repeat(4,1fr);
-		justify-items: left;
-		text-align: left;
-		margin: 0px 25px;
-	}
-
-	#VCALogo{
-		width: 50%;
-	}
-
-	#serviceGuaranteeLogo{
-		width: 40%;
-	}
-  }
-
-/* tablet landscape   */
-@media (min-width: 900px) and (max-width: 1200px) and (orientation: landscape) {
-	
-	header{
-		grid-template-columns: repeat(4, 1fr);
-		-webkit-box-pack: center;
-			-ms-flex-pack: center;
-				justify-content: center; 
-		margin: 0px 25px;
-	}
-	
-	#headerImage{
-		grid-column-start: 1;
-		grid-row: 1/1;
-	}
-	
-	#brandLogo{
-		max-width: 80%;
-	}
-	
-	#mainMenu{
-		grid-column: 2/4;
-		grid-row-start: 1;
-		margin-top: 0;
-	}
-
-	#contactInfo{
-		font-size: 10px;
-	}
-	
-	#contactSearch{
-		grid-row-start: 1;
-		-ms-flex-item-align: start;
-			align-self: start;
-	}
-
-	#hero{
-		padding: 60px;
-	}
-   
-	#heroText{
-		width: 40%;
-		text-align: left;
-	}
-
-	main{
-		margin: 0px 25px;
-	}
-
-	#companyIntro{
-		padding-top: 15px; 
-	} 
-
-	#servicesHeader{
-		text-align: left;
-
-		span{
-			margin: 0 7px;
-			font-size: 2.5em;
-		}
-	} 
-
-	#serviceNav, #serviceDesc, #serviceImg{
-		width: 25%;
-	}
-
-	#serviceImg{
-		display: initial;
-		margin: 40px;
-	}
-
-	#projectImages{
-		-webkit-box-pack: justify;
-			-ms-flex-pack: justify;
-				justify-content: space-between;
-	}
-
-	.projectImage{
-		img{
-			width: 200px;
-		}
-	} 
-
-	#projectsIcon{
-		width: 2.5em;
-		vertical-align: bottom;
-	}
-
-	#projectHeader{
-		display: inline;
-		text-align: left;
-	}
-
-	.paintbrush{
-		font-size: 45px;
-		-webkit-transform: rotate(-45deg);
-				transform: rotate(-45deg);
-	}
-
-	#reviewsHeader{
-		text-align: left;
-
-		span {
-			font-size: 2.5em;
-		}
-	}
-
-	.reviewItem{
-		max-width: 30%;
-	}
-
-	#quotations{
-		-webkit-box-pack: justify;
-			-ms-flex-pack: justify;
-				justify-content: space-between;
-		-ms-flex-line-pack: center;
-			align-content: center;
-	}    
-
-	#quotationsHeader{
-		text-align: left;
-
-		span{
-			font-size: 2.5em;
-		}
-	}
-
-	#quotationInfo{
-		width: 45%;
-		padding: 20px;
-	}
-
-	#quotationImg{
-		width: 45%;
-	}
-
-	.infoSection{
-		width: 24%;
-		text-align: left;
-	}
-
-	.infoIcon{
-		font-size: 2.5em;
-	}
-
-	.infoSection{
-		width: 24%;
-		text-align: left;
-	}
-
-	footer{
-		grid-template-columns: repeat(4,1fr);
-		justify-items: left;
-		text-align: left;
-		margin: 0px 25px;
-	}
-
-	#VCALogo{
-		width: 50%;
-	}
-
-	#serviceGuaranteeLogo{
-		width: 40%;
-	}
-  }
-
-  /* laptop/desktop */
-@media (min-width: 1200px){
-	
-	/* HEADER */
-
-	header{
-		grid-template-columns: repeat(4, 1fr);
-		-webkit-box-pack: center;
-			-ms-flex-pack: center;
-				justify-content: center; 
-		margin: 0px 25px;
-		padding: 15px 0;
-	}
-	
-	#headerImage{
-		grid-column-start: 1;
-		grid-row: 1/1;
-	}
-	
-	#brandLogo{
-		max-width: 80%;
-	}
-	
-	#mainMenu{
-		grid-column: 2/4;
-		grid-row-start: 1;
-		margin-top: 0;
-		font-size: 20px;
-	}
-
-	#contactInfo{
-		font-size: 11px;
-	}
-
-	#telephone{
-		padding-right: 10px;
-	}
-
-	#contactSearch{
-		grid-row-start: 1;
-		grid-column-start: 4;
-	}
-
-	#hero{
-		padding: 60px;
-	}
-
-	#heroText{
-		width: 40%;
-		text-align: left;
-	}
-
-	/* MAIN */
-	
-	main{
-		-webkit-box-pack: center;
-			-ms-flex-pack: center;
-				justify-content: center;
-		margin: 0px 25px;
-	}
-
-	#companyIntro{
-		margin-top: 15px;
-	}
+	// #companyIntro{
+	// 	margin-top: 15px;
+	// }
 
 	#servicesHeader{
 		span{
@@ -834,17 +575,18 @@ footer p{
 		bottom: 0;
 		left: 0;
 		right: 0;
-		height: 100%;
+		height: auto;
 		width: 100%;
 		opacity: 0;
 		-webkit-transition: .5s ease;
 		transition: .5s ease;
 		background-color: rgb(255, 255, 255);
+		border: 1px solid $primary-color; 
 	}
 
 	.imgDescText{
 		font-weight: bolder;
-		color: #FF0000;
+		color: $primary-color;
 		position: absolute;
 		top: 65%;
 		left: 50%;
@@ -865,6 +607,7 @@ footer p{
 	.projectImage{
 		img{
 			width: 250px;
+			height: auto;
 		}
 	} 
 
@@ -886,7 +629,7 @@ footer p{
 	}
 
 	#serviceNav, #serviceDesc, #serviceImg{
-		width: 25%;
+		width: 30%;
 	}
 
 	#serviceImg{
@@ -905,6 +648,13 @@ footer p{
 	.reviewItem{
 		max-width: 30%;
 	}
+	
+	#allReviews{
+	a{
+		float: right;
+		text-align: left;
+	}
+}
 
 	#quotations{
 		-webkit-box-pack: justify;
@@ -925,10 +675,16 @@ footer p{
 	#quotationInfo{
 		width: 45%;
 		padding: 10px;
+		text-align: left;
+	}
+
+	#quotationBtn{
+		float: right;
 	}
 
 	#quotationImg{
 		width: 45%;
+		height: auto;
 	}
 
 	.infoSection{
@@ -953,5 +709,150 @@ footer p{
 
 	#serviceGuaranteeLogo{
 		width: 40%;
+	}
+}
+
+// /* tablet portrait */
+@media (min-width: 600px) and (max-width: 900px) {
+	header{
+	display: grid;
+	grid-template-columns: 1fr;
+	padding-top: 15px;
+
+		li{
+			display:inline;
+		}
+	}
+
+	#headerImage{
+		grid-row-start: 1;
+		grid-column: 1/5;
+	}
+
+	#brandLogo{
+		max-width: 100%;
+		height: auto;
+	}
+
+	#mainMenu{
+		grid-row-start: 2;
+		grid-column-start: 1;
+		-ms-flex-item-align: center;
+			align-self: center;
+		justify-self: center;
+		margin-top: 20px;
+		font-size: 1.3em;
+	}
+
+	#contactInfo{
+		grid-row-start: 3;
+		
+		img{
+			width: 3%;
+			height: auto;
+		}
+	}
+
+	#search{
+		grid-row-start: 4;
+		grid-column-start: 1;
+		-ms-flex-item-align: center;
+			align-self: center;
+			margin-top: 10px;
+		text-align: center;
+
+		input{
+			width: 60%;
+		}
+	}
+
+	main{
+		margin: 0px;
+	}
+
+	.projectImage{
+		img{
+			width: 150px;
+			height: auto;
+		}
+	}
+
+	.imgDesc{
+		display: none;
+	}
+	
+	#serviceNav{
+		width: 40%;
+	}
+
+	#serviceDesc{
+		width: 50%;
+	}
+
+	#serviceImg{
+		display: none;
+	}
+
+	.reviewItem{
+		max-width: 100%;
+		padding: 10px;
+		text-align: center;
+	}
+
+	.reviewHeader{
+		width: 40%;
+		padding-top: 20px;
+		margin: auto;
+		justify-content: center;
+	}
+
+	#allReviews{
+		text-align: center;
+	}
+
+	#quotations{
+		margin-bottom: 35px;
+	}
+
+	#quotationImg{
+		height: auto;
+	}
+
+	#companyInfo{
+		justify-content: space-around;
+	}
+
+	.infoSection{
+		width: 40%;
+	}
+
+	footer{
+		grid-template-columns: repeat(2,0.5fr);
+		justify-items: center;
+		text-align: center;
+		margin: 0px;
+	}
+}
+
+/* tablet landscape   */
+@media (min-width: 900px) and (max-width: 1200px) and (orientation: landscape) {
+	
+	.projectImage{
+		img{
+			width: 200px;
+			height: auto;
+		}
+	}
+
+	.imgDesc{
+		display: none;
+	}
+
+	#serviceImg{
+		display: initial;
+	}
+
+	#quotations{
+		margin-bottom: 35px;
 	}
 }

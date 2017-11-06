@@ -2,18 +2,280 @@
 <html lang="nl">
 
 <head>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Koopmans</title>
+	<title>Schilderwerken Koopmans</title>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="assets/libraries/jquery-3.2.1.min.js"><\/script>')</script>
-	<script src="assets/libraries/blazy.min.js"></script>
-	<script src="js/index.js"></script>
+	<script type="text/javascript">
+		(function (q, m) { "function" === typeof define && define.amd ? define(m) : "object" === typeof exports ? module.exports = m() : q.Blazy = m() })(this, function () { function q(b) { var c = b._util; c.elements = E(b.options); c.count = c.elements.length; c.destroyed && (c.destroyed = !1, b.options.container && l(b.options.container, function (a) { n(a, "scroll", c.validateT) }), n(window, "resize", c.saveViewportOffsetT), n(window, "resize", c.validateT), n(window, "scroll", c.validateT)); m(b) } function m(b) { for (var c = b._util, a = 0; a < c.count; a++) { var d = c.elements[a], e; a: { var g = d; e = b.options; var p = g.getBoundingClientRect(); if (e.container && y && (g = g.closest(e.containerClass))) { g = g.getBoundingClientRect(); e = r(g, f) ? r(p, { top: g.top - e.offset, right: g.right + e.offset, bottom: g.bottom + e.offset, left: g.left - e.offset }) : !1; break a } e = r(p, f) } if (e || t(d, b.options.successClass)) b.load(d), c.elements.splice(a, 1), c.count-- , a-- } 0 === c.count && b.destroy() } function r(b, c) { return b.right >= c.left && b.bottom >= c.top && b.left <= c.right && b.top <= c.bottom } function z(b, c, a) { if (!t(b, a.successClass) && (c || a.loadInvisible || 0 < b.offsetWidth && 0 < b.offsetHeight)) if (c = b.getAttribute(u) || b.getAttribute(a.src)) { c = c.split(a.separator); var d = c[A && 1 < c.length ? 1 : 0], e = b.getAttribute(a.srcset), g = "img" === b.nodeName.toLowerCase(), p = (c = b.parentNode) && "picture" === c.nodeName.toLowerCase(); if (g || void 0 === b.src) { var h = new Image, w = function () { a.error && a.error(b, "invalid"); v(b, a.errorClass); k(h, "error", w); k(h, "load", f) }, f = function () { g ? p || B(b, d, e) : b.style.backgroundImage = 'url("' + d + '")'; x(b, a); k(h, "load", f); k(h, "error", w) }; p && (h = b, l(c.getElementsByTagName("source"), function (b) { var c = a.srcset, e = b.getAttribute(c); e && (b.setAttribute("srcset", e), b.removeAttribute(c)) })); n(h, "error", w); n(h, "load", f); B(h, d, e) } else b.src = d, x(b, a) } else "video" === b.nodeName.toLowerCase() ? (l(b.getElementsByTagName("source"), function (b) { var c = a.src, e = b.getAttribute(c); e && (b.setAttribute("src", e), b.removeAttribute(c)) }), b.load(), x(b, a)) : (a.error && a.error(b, "missing"), v(b, a.errorClass)) } function x(b, c) { v(b, c.successClass); c.success && c.success(b); b.removeAttribute(c.src); b.removeAttribute(c.srcset); l(c.breakpoints, function (a) { b.removeAttribute(a.src) }) } function B(b, c, a) { a && b.setAttribute("srcset", a); b.src = c } function t(b, c) { return -1 !== (" " + b.className + " ").indexOf(" " + c + " ") } function v(b, c) { t(b, c) || (b.className += " " + c) } function E(b) { var c = []; b = b.root.querySelectorAll(b.selector); for (var a = b.length; a--; c.unshift(b[a])); return c } function C(b) { f.bottom = (window.innerHeight || document.documentElement.clientHeight) + b; f.right = (window.innerWidth || document.documentElement.clientWidth) + b } function n(b, c, a) { b.attachEvent ? b.attachEvent && b.attachEvent("on" + c, a) : b.addEventListener(c, a, { capture: !1, passive: !0 }) } function k(b, c, a) { b.detachEvent ? b.detachEvent && b.detachEvent("on" + c, a) : b.removeEventListener(c, a, { capture: !1, passive: !0 }) } function l(b, c) { if (b && c) for (var a = b.length, d = 0; d < a && !1 !== c(b[d], d); d++); } function D(b, c, a) { var d = 0; return function () { var e = +new Date; e - d < c || (d = e, b.apply(a, arguments)) } } var u, f, A, y; return function (b) { if (!document.querySelectorAll) { var c = document.createStyleSheet(); document.querySelectorAll = function (a, b, d, h, f) { f = document.all; b = []; a = a.replace(/\[for\b/gi, "[htmlFor").split(","); for (d = a.length; d--;) { c.addRule(a[d], "k:v"); for (h = f.length; h--;)f[h].currentStyle.k && b.push(f[h]); c.removeRule(0) } return b } } var a = this, d = a._util = {}; d.elements = []; d.destroyed = !0; a.options = b || {}; a.options.error = a.options.error || !1; a.options.offset = a.options.offset || 100; a.options.root = a.options.root || document; a.options.success = a.options.success || !1; a.options.selector = a.options.selector || ".b-lazy"; a.options.separator = a.options.separator || "|"; a.options.containerClass = a.options.container; a.options.container = a.options.containerClass ? document.querySelectorAll(a.options.containerClass) : !1; a.options.errorClass = a.options.errorClass || "b-error"; a.options.breakpoints = a.options.breakpoints || !1; a.options.loadInvisible = a.options.loadInvisible || !1; a.options.successClass = a.options.successClass || "b-loaded"; a.options.validateDelay = a.options.validateDelay || 25; a.options.saveViewportOffsetDelay = a.options.saveViewportOffsetDelay || 50; a.options.srcset = a.options.srcset || "data-srcset"; a.options.src = u = a.options.src || "data-src"; y = Element.prototype.closest; A = 1 < window.devicePixelRatio; f = {}; f.top = 0 - a.options.offset; f.left = 0 - a.options.offset; a.revalidate = function () { q(a) }; a.load = function (a, b) { var c = this.options; void 0 === a.length ? z(a, b, c) : l(a, function (a) { z(a, b, c) }) }; a.destroy = function () { var a = this._util; this.options.container && l(this.options.container, function (b) { k(b, "scroll", a.validateT) }); k(window, "scroll", a.validateT); k(window, "resize", a.validateT); k(window, "resize", a.saveViewportOffsetT); a.count = 0; a.elements.length = 0; a.destroyed = !0 }; d.validateT = D(function () { m(a) }, a.options.validateDelay, a); d.saveViewportOffsetT = D(function () { C(a.options.offset) }, a.options.saveViewportOffsetDelay, a); C(a.options.offset); l(a.options.breakpoints, function (a) { if (a.width >= window.screen.width) return u = a.src, !1 }); setTimeout(function () { q(a) }) } });
+	</script>
 
-	<link rel="stylesheet" href="assets/fonts/et-line-font/et-line-font/style.css">
-	<link rel="stylesheet" href="css/index.css">
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "Organization",
+			"url": "http://www.example.com",
+			"name": "Schilderwerken Koopmans",
+			"contactPoint": {
+    		"@type": "ContactPoint",
+			"telephone": "+31 0512 54 11 49",
+			"email": "info@schilderwerkenkoopmans.nl", 
+    		"contactType": "Sales contact point"
+  			}
+		}
+	</script>
+
+	<script type="text/javascript">
+		function lazyLoadImg() {
+			var bLazy = new Blazy({
+				success: function (ele) {
+					console.log('image loaded');
+				}
+				, error: function (ele, msg) {
+					if (msg === 'missing') {
+						console.log('data-src missing');
+					}
+					else if (msg === 'invalid') {
+						console.log('data-src invalid');
+					}
+				}
+			});
+		}
+		lazyLoadImg();
+	</script>
+
+	<style>
+		@charset 'utf-8';
+
+		@font-face{font-family:'et-line';src:url('assets/fonts/et-line-font/fonts/et-line.eot');src:url('assets/fonts/et-line-font/fonts/et-line.eot?#iefix') format('embedded-opentype'), url('assets/fonts/et-line-font/fonts/et-line.woff') format('woff'), url('assets/fonts/et-line-font/fonts/et-line.ttf') format('truetype'), url('assets/fonts/et-line-font/fonts/et-line.svg#et-line') format('svg');font-weight:normal;font-style:normal}[data-icon]:before{font-family:'et-line';content:attr(data-icon);speak:none;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block}.icon-mobile,.icon-laptop,.icon-desktop,.icon-tablet,.icon-phone,.icon-document,.icon-documents,.icon-search,.icon-clipboard,.icon-newspaper,.icon-notebook,.icon-book-open,.icon-browser,.icon-calendar,.icon-presentation,.icon-picture,.icon-pictures,.icon-video,.icon-camera,.icon-printer,.icon-toolbox,.icon-briefcase,.icon-wallet,.icon-gift,.icon-bargraph,.icon-grid,.icon-expand,.icon-focus,.icon-edit,.icon-adjustments,.icon-ribbon,.icon-hourglass,.icon-lock,.icon-megaphone,.icon-shield,.icon-trophy,.icon-flag,.icon-map,.icon-puzzle,.icon-basket,.icon-envelope,.icon-streetsign,.icon-telescope,.icon-gears,.icon-key,.icon-paperclip,.icon-attachment,.icon-pricetags,.icon-lightbulb,.icon-layers,.icon-pencil,.icon-tools,.icon-tools-2,.icon-scissors,.icon-paintbrush,.icon-magnifying-glass,.icon-circle-compass,.icon-linegraph,.icon-mic,.icon-strategy,.icon-beaker,.icon-caution,.icon-recycle,.icon-anchor,.icon-profile-male,.icon-profile-female,.icon-bike,.icon-wine,.icon-hotairballoon,.icon-globe,.icon-genius,.icon-map-pin,.icon-dial,.icon-chat,.icon-heart,.icon-cloud,.icon-upload,.icon-download,.icon-target,.icon-hazardous,.icon-piechart,.icon-speedometer,.icon-global,.icon-compass,.icon-lifesaver,.icon-clock,.icon-aperture,.icon-quote,.icon-scope,.icon-alarmclock,.icon-refresh,.icon-happy,.icon-sad,.icon-facebook,.icon-twitter,.icon-googleplus,.icon-rss,.icon-tumblr,.icon-linkedin,.icon-dribbble{font-family:'et-line';speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block}.icon-mobile:before{content:"\e000"}.icon-laptop:before{content:"\e001"}.icon-desktop:before{content:"\e002"}.icon-tablet:before{content:"\e003"}.icon-phone:before{content:"\e004"}.icon-document:before{content:"\e005"}.icon-documents:before{content:"\e006"}.icon-search:before{content:"\e007"}.icon-clipboard:before{content:"\e008"}.icon-newspaper:before{content:"\e009"}.icon-notebook:before{content:"\e00a"}.icon-book-open:before{content:"\e00b"}.icon-browser:before{content:"\e00c"}.icon-calendar:before{content:"\e00d"}.icon-presentation:before{content:"\e00e"}.icon-picture:before{content:"\e00f"}.icon-pictures:before{content:"\e010"}.icon-video:before{content:"\e011"}.icon-camera:before{content:"\e012"}.icon-printer:before{content:"\e013"}.icon-toolbox:before{content:"\e014"}.icon-briefcase:before{content:"\e015"}.icon-wallet:before{content:"\e016"}.icon-gift:before{content:"\e017"}.icon-bargraph:before{content:"\e018"}.icon-grid:before{content:"\e019"}.icon-expand:before{content:"\e01a"}.icon-focus:before{content:"\e01b"}.icon-edit:before{content:"\e01c"}.icon-adjustments:before{content:"\e01d"}.icon-ribbon:before{content:"\e01e"}.icon-hourglass:before{content:"\e01f"}.icon-lock:before{content:"\e020"}.icon-megaphone:before{content:"\e021"}.icon-shield:before{content:"\e022"}.icon-trophy:before{content:"\e023"}.icon-flag:before{content:"\e024"}.icon-map:before{content:"\e025"}.icon-puzzle:before{content:"\e026"}.icon-basket:before{content:"\e027"}.icon-envelope:before{content:"\e028"}.icon-streetsign:before{content:"\e029"}.icon-telescope:before{content:"\e02a"}.icon-gears:before{content:"\e02b"}.icon-key:before{content:"\e02c"}.icon-paperclip:before{content:"\e02d"}.icon-attachment:before{content:"\e02e"}.icon-pricetags:before{content:"\e02f"}.icon-lightbulb:before{content:"\e030"}.icon-layers:before{content:"\e031"}.icon-pencil:before{content:"\e032"}.icon-tools:before{content:"\e033"}.icon-tools-2:before{content:"\e034"}.icon-scissors:before{content:"\e035"}.icon-paintbrush:before{content:"\e036"}.icon-magnifying-glass:before{content:"\e037"}.icon-circle-compass:before{content:"\e038"}.icon-linegraph:before{content:"\e039"}.icon-mic:before{content:"\e03a"}.icon-strategy:before{content:"\e03b"}.icon-beaker:before{content:"\e03c"}.icon-caution:before{content:"\e03d"}.icon-recycle:before{content:"\e03e"}.icon-anchor:before{content:"\e03f"}.icon-profile-male:before{content:"\e040"}.icon-profile-female:before{content:"\e041"}.icon-bike:before{content:"\e042"}.icon-wine:before{content:"\e043"}.icon-hotairballoon:before{content:"\e044"}.icon-globe:before{content:"\e045"}.icon-genius:before{content:"\e046"}.icon-map-pin:before{content:"\e047"}.icon-dial:before{content:"\e048"}.icon-chat:before{content:"\e049"}.icon-heart:before{content:"\e04a"}.icon-cloud:before{content:"\e04b"}.icon-upload:before{content:"\e04c"}.icon-download:before{content:"\e04d"}.icon-target:before{content:"\e04e"}.icon-hazardous:before{content:"\e04f"}.icon-piechart:before{content:"\e050"}.icon-speedometer:before{content:"\e051"}.icon-global:before{content:"\e052"}.icon-compass:before{content:"\e053"}.icon-lifesaver:before{content:"\e054"}.icon-clock:before{content:"\e055"}.icon-aperture:before{content:"\e056"}.icon-quote:before{content:"\e057"}.icon-scope:before{content:"\e058"}.icon-alarmclock:before{content:"\e059"}.icon-refresh:before{content:"\e05a"}.icon-happy:before{content:"\e05b"}.icon-sad:before{content:"\e05c"}.icon-facebook:before{content:"\e05d"}.icon-twitter:before{content:"\e05e"}.icon-googleplus:before{content:"\e05f"}.icon-rss:before{content:"\e060"}.icon-tumblr:before{content:"\e061"}.icon-linkedin:before{content:"\e062"}.icon-dribbble:before{content:"\e063"}
+
+		@font-face {
+			font-family: 'eurostile';
+			src: url("assets/fonts/webfontkit-eurostile/eurostile-webfont.woff2") format("woff2"), url("assets/fonts/webfontkit-eurostile/eurostile-webfont.woff") format("woff");
+			font-weight: normal;
+			font-style: normal
+		}
+
+		@font-face {
+			font-family: 'eurostile';
+			src: url("assets/fonts/webfontkit-eurostileBold/eurostib-webfont.woff2") format("woff2"), url("assets/fonts/webfontkit-eurostileBold/eurostib-webfont.woff") format("woff");
+			font-weight: bold;
+			font-style: normal
+		}
+
+		body {
+			font-family: "eurostile", "Arial", sans-serif;
+			max-width: 1200px;
+			margin: auto;
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+		}
+
+		p {
+			line-height: 1.5em
+		}
+
+		header {
+			display: grid;
+			grid-template-columns: 1fr;
+			padding: 15px;
+			margin-bottom: 25px
+		}
+
+		header li {
+			display: inline
+		}
+
+		#headerImage {
+			grid-row-start: 1
+		}
+
+		#brandLogo {
+			max-width: 100%;
+			height: auto
+		}
+
+		#mainMenu {
+			grid-row-start: 2;
+			-ms-flex-item-align: center;
+			align-self: center;
+			justify-self: center;
+			margin-top: 20px;
+			font-size: 17px
+		}
+
+		#mainMenu ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0
+		}
+
+		#mainMenu ul li {
+			padding: 8px
+		}
+
+		#mainMenu ul li a {
+			text-decoration: none;
+			color: #000
+		}
+
+		#mainMenu ul li:hover {
+			background-color: #ff3d3d
+		}
+
+		#mainMenu ul li:hover a {
+			color: #fff
+		}
+
+		#search {
+			grid-row-start: 4;
+			-ms-flex-item-align: center;
+			align-self: center;
+			margin-top: 10px;
+			text-align: center
+		}
+
+		#search input {
+			font-size: 20px;
+			width: 60%;
+			border: 1px solid #fff;
+			border-bottom: 1px solid #e00614
+		}
+
+		#searchIcon {
+			font-size: 25px;
+			vertical-align: middle;
+			cursor: pointer
+		}
+
+		.active {
+			background-color: #e00614;
+			color: #fff
+		}
+
+		.selected {
+			font-weight: bold;
+			text-decoration: underline;
+			-webkit-text-decoration-color: #e00614;
+			text-decoration-color: #e00614
+		}
+
+		#contactInfo {
+			font-size: 11px;
+			text-align: center;
+			margin-top: 20px
+		}
+
+		#contactInfo ul {
+			margin: 0;
+			padding: 0
+		}
+
+		#contactInfo img {
+			width: 3%;
+			height: auto;
+			vertical-align: text-bottom
+		}
+
+		main {
+			display: grid;
+			grid-template-columns: 100%
+		}
+
+		#hero {
+			background-image: url('assets/fotos/hero-image.jpg');
+			background-size: cover;
+			background-position: center
+		}
+
+		#heroText {
+			background: rgba(255, 255, 255, 0.5);
+			padding: 15px;
+			text-align: center
+		}
+
+		#contactBtn {
+			background-color: #e00614;
+			color: #fff;
+			cursor: pointer;
+			border: none;
+			padding: 5px 24px;
+			margin-bottom: 6px;
+			text-align: center
+		}
+
+		@media (min-width: 600px) and (max-width: 1920px) {
+			header {
+				grid-template-columns: repeat(4, 1fr);
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				margin: 0px 25px;
+				padding: 30px 0;
+			}
+
+			#headerImage {
+				grid-column-start: 1;
+				grid-row: 1/1;
+			}
+
+			#brandLogo {
+				max-width: 80%;
+			}
+
+			#mainMenu {
+				grid-column: 2/4;
+				grid-row-start: 1;
+				margin-top: 0;
+				font-size: 20px;
+			}
+
+			#contactInfo {
+
+				img {
+					width: 5%;
+					height: auto;
+				}
+			}
+
+			#telephone {
+				padding-right: 10px;
+			}
+
+			#search {
+				grid-row-start: 1;
+				grid-column-start: 4;
+
+				input {
+					width: 85%;
+				}
+			}
+
+			#hero {
+				padding: 60px;
+			}
+
+			#heroText {
+				width: 40%;
+				text-align: left;
+			}
+
+			/* MAIN */
+			main {
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				margin: 0px 25px;
+			}
+
+			#companyIntro {
+				margin-top: 15px;
+			}
+		}
+	</style>
+	<!-- <link rel="stylesheet" href="assets/fonts/et-line-font/et-line-font/style.css"> -->
 </head>
 
 <body>
@@ -50,11 +312,13 @@
 			</div>
 			<div id="search">
 				<input id="searchBar" title="vul hier uw zoekterm in" type="text" placeholder="zoeken">
-				<label label for="searchBar"><div id="searchIcon" class="icon-magnifying-glass"></div></label>
+				<label label for="searchBar">
+					<div id="searchIcon" class="icon-magnifying-glass"></div>
+				</label>
 			</div>
 		</header>
 		<main>
-			<div class="b-lazy" data-src="assets/fotos/hero-image.jpg" id="hero">
+			<div id="hero">
 				<div id="heroText">
 					<h1>Modern Vakmanschap</h1>
 					<p>De kleinschaligheid van Schilderwerken Koopmans is onze kracht. Onze klanten hebben altijd rechtstreeks en persoonlijk
@@ -284,8 +548,12 @@
 			<div id="contactInfoFooter" class="footerItem">
 				<span class="icon-phone footerIcon"></span>
 				<h3 class="footerHeader">Contactgegevens</h3>
-				<p><a href="#">info@schilderwerkenkoopmans.nl</a></p>
-				<p><a href="#">0512-541149</a></p>
+				<p>
+					<a href="#">info@schilderwerkenkoopmans.nl</a>
+				</p>
+				<p>
+					<a href="#">0512-541149</a>
+				</p>
 			</div>
 			<div id="visitaddress" class="footerItem">
 				<span class="icon-map-pin footerIcon"></span>
@@ -306,6 +574,36 @@
 			</div>
 		</footer>
 	</div>
+	<script type="text/javascript">
+		function loadScript(url, callback) {
+			var script = document.createElement("script")
+			script.type = "text/javascript";
+
+			if (script.readyState) {
+				// handle IE
+				script.onreadystatechange = function () {
+					if (script.readyState == "loaded" || script.readyState == "complete") {
+						script.onreadystatechange = null;
+						callback();
+					}
+				};
+			} else {
+				// handle other browsers
+				script.onload = function () {
+					callback();
+				};
+			}
+
+			script.src = url;
+			document.getElementsByTagName("head")[0].appendChild(script);
+		}
+
+		loadScript('assets/libraries/jquery-3.2.1.min.js', function () {
+				loadScript('js/index.js', function () {
+					console.log('all JS files loaded');
+				});
+		});
+	</script>
 </body>
 
 </html>

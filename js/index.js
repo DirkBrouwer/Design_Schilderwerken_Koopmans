@@ -4,8 +4,7 @@ const serviceNavItems = [];
 const serviceContent = [];
 
 $(document).ready(function () {
-
-	lazyLoadImg();
+	loadStyleSheet('css/index.css');
 
 	$(document).on('click', '#navList li', function () {
 		populateserviceDesc($(this));
@@ -16,21 +15,14 @@ $(document).ready(function () {
 	getServiceContentData();
 });
 
-function lazyLoadImg() {
-	var bLazy = new Blazy({
-		success: function (ele) {
-			console.log('image loaded');
-		}
-		, error: function (ele, msg) {
-			if (msg === 'missing') {
-				console.log('data-src missing');
-			}
-			else if (msg === 'invalid') {
-				console.log('data-src invalid');
-			}
-		}
-	});
-}
+function loadStyleSheet(src) {
+	if (document.createStyleSheet) {
+		document.createStyleSheet(src);
+	}
+	else {
+		$("head").append($("<link rel='stylesheet' href='" + src + "' type='text/css' media='screen' />"));
+	}
+};
 
 function getServiceContentData() {
 	$.getJSON("json/serviceNavData.json", function (data) {
@@ -59,7 +51,7 @@ function getServiceContentData() {
 function populateserviceDesc(clickedNavItem) {
 	$('#navList li').removeClass('selected');
 	$(clickedNavItem).addClass('selected');
-	
+
 	let correctText = parseInt(clickedNavItem[0].id.substr(length - 1));
 
 	$('#serviceDescHeader').html('<b>' + serviceContent[correctText].serviceHeader + '</b>');
